@@ -9,7 +9,7 @@ arch:
   - aarch64
   - amd64
   - i386
-image: homeassistant/{arch}-addon-nginx
+image: homeassistant/{arch}-addon-nginx_proxy
 map:
   - ssl
   - share
