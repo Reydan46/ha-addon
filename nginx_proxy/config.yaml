@@ -1,8 +1,9 @@
-version: 1.0.0
+version: 3.1.1
+hassio_api: true
 slug: nginx_proxy
-name: NGINX Home Assistant SSL
-description: NGINX
-url: https://github.com/Reydan46/ha-addon/tree/main/nginx
+name: NGINX Home Assistant SSL proxy MOD
+description: An SSL/TLS proxy
+url: https://github.com/home-assistant/hassio-addons/tree/master/nginx_proxy
 arch:
   - armhf
   - armv7
@@ -14,27 +15,25 @@ map:
   - ssl
   - share
 options:
-  domain: null
-  server: null
-  certfile: homeassistant.crt
-  keyfile: homeassistant.key
+  certfile: fullchain.pem
   cloudflare: false
   customize:
     active: false
-    default: nginx/nginx_default*.conf
-    servers: nginx/conf/*.conf
+    default: nginx_proxy_default*.conf
+    servers: nginx_proxy/*.conf
+  domain: null
   hsts: max-age=31536000; includeSubDomains
+  keyfile: privkey.pem
 ports:
-  443/tcp: 8122
+  443/tcp: 443
   80/tcp: null
 schema:
-  domain: str
-  server: str
   certfile: str
-  keyfile: str
   cloudflare: bool
   customize:
     active: bool
     default: str
     servers: str
+  domain: str
   hsts: str
+  keyfile: str

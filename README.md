@@ -1,4 +1,4 @@
-# Home Assistant Add-on: NGINX Home Assistant
+# Home Assistant Add-on: NGINX Home Assistant MOD
 
 Addon NGINX in Homeassistant.
 

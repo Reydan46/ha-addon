@@ -1,4 +1,4 @@
-# Home Assistant Add-on: NGINX Home Assistant SSL proxy
+# Home Assistant Add-on: NGINX Home Assistant SSL proxy MOD
 
 ## Installation
 
